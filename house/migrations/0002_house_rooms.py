@@ -15,6 +15,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='house',
             name='rooms',
-            field=models.ManyToManyField(to='room.Room'),
+            field=models.ManyToManyField(to='room.Room', blank=True),
         ),
     ]

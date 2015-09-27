@@ -1,4 +1,6 @@
 from django.db import models
+from image_cropping import ImageRatioField
+
 
 class Room(models.Model):
     title = models.CharField(max_length=200)
@@ -16,3 +18,13 @@ class Room(models.Model):
     # Override the __unicode__() method to return out something meaningful!
     def __unicode__(self):
         return self.title
+
+class RoomImage(models.Model):
+    image = models.ImageField('Image', upload_to='houses')
+    cropping = ImageRatioField('image', '215x180')
+    obj = models.ForeignKey(Room)
+
+    class Meta:
+        ordering = ("-image",)
+        verbose_name = u'Room image'
+        verbose_name_plural = u'Room images'
