@@ -1,3 +1,8 @@
 Django==1.8.4
+django-appconf==1.0.1
 django-grappelli==2.7.1
+django-image-cropping==1.0.2
+easy-thumbnails==2.2
 MySQL-python==1.2.5
+Pillow==2.9.0
+six==1.9.0

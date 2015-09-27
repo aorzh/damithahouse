@@ -49,6 +49,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'house',
+    'room',
+    'easy_thumbnails',
+    'image_cropping',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -93,6 +96,9 @@ DATABASES = {
         'NAME': 'damitha',
         'USER': 'root',
         'PASSWORD': 'root',
+        'OPTIONS': {
+            "init_command": "SET foreign_key_checks = 0;",
+        },
     }
 }
 
@@ -132,3 +138,8 @@ GRAPPELLI_ADMIN_TITLE = 'Admin panel'
 GRAPPELLI_SWITCH_USER = True
 GRAPPELLI_INDEX_DASHBOARD = 'djangodamitha.dashboard.CustomIndexDashboard'
 
+# Easy thumbnails
+from easy_thumbnails.conf import Settings as thumbnail_settings
+THUMBNAIL_PROCESSORS = (
+    'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS
