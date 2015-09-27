@@ -41,9 +41,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'django.contrib.contenttypes',
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -88,8 +89,10 @@ WSGI_APPLICATION = 'djangodamitha.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'damitha',
+        'USER': 'root',
+        'PASSWORD': 'root',
     }
 }
 
@@ -112,7 +115,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'templates'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'local')
+# Additional locations of static files
+STATICFILES_DIRS = (
+    '/Users/alex/Sites/djangodamitha/static',
 )
+
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
+
+MEDIA_URL = '/media/'
+
+SITE_ID = 1
+
+# Grappelli settings
+GRAPPELLI_ADMIN_TITLE = 'Admin panel'
+GRAPPELLI_SWITCH_USER = True
+GRAPPELLI_INDEX_DASHBOARD = 'djangodamitha.dashboard.CustomIndexDashboard'
+
