@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>La Casa - Real Estate HTML5 Home Page Template</title>
-	<meta charset="utf-8">
-	<meta name="author" content="pixelhint.com">
-	<meta name="description" content="La casa free real state fully responsive html5/css3 home page website template"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-	
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-</head>
-<body>
-
+{% extends 'base.html' %}
+{% block content %}
 	<section class="hero">
 		<header>
 			<div class="wrapper">
@@ -192,7 +177,8 @@
 			</div>
 		</div>
 	</section>	<!--  end listing section  -->
-
+{% endblock %}
+{% block footer %}
 	<footer>
 		<div class="wrapper footer">
 			<ul>
@@ -242,6 +228,4 @@
 			Copyright © 2015 <a href="http://pixelhint.com" target="_blank" class="ph_link" title="Download more free Templates">Pixelhint.com</a>. All Rights Reserved.
 		</div>
 	</footer><!--  end footer  -->
-	
-</body>
-</html>
+{% endblock %}
