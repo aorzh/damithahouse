@@ -3,7 +3,6 @@ from models import House, HouseImage
 from image_cropping import ImageCroppingMixin
 
 
-
 class HouseImageInline(ImageCroppingMixin, admin.TabularInline):
     model = HouseImage
     min_num = 1

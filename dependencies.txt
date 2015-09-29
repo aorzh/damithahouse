@@ -1,5 +1,6 @@
 Django==1.8.4
 django-appconf==1.0.1
+django-ckeditor==5.0.2
 django-grappelli==2.7.1
 django-image-cropping==1.0.2
 easy-thumbnails==2.2

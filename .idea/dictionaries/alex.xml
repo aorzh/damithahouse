@@ -3,10 +3,12 @@
     <words>
       <w>airbnb</w>
       <w>bookingcom</w>
+      <w>ckeditor</w>
       <w>damitha</w>
       <w>djangodamitha</w>
       <w>filebrowser</w>
       <w>inlines</w>
+      <w>tinymce</w>
       <w>tripsadvisor</w>
     </words>
   </dictionary>

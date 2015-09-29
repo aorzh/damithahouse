@@ -1,11 +1,12 @@
 from django.db import models
 from room.models import Room
 from image_cropping import ImageRatioField
+from ckeditor.fields import RichTextField
 
 
 class House(models.Model):
     title = models.CharField(max_length=200)
-    description = models.TextField()
+    description = RichTextField()
     rooms = models.ManyToManyField(Room, blank=True)
 
     class Meta:
