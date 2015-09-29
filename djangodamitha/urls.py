@@ -18,13 +18,15 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
+from room import views as room_views
+from room import urls as room_urls
 
 urlpatterns = [
+    url(r'^$', room_views.index, name='index'),
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^ckeditor/', include('ckeditor_uploader.urls'))
-
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^rooms/', include(room_urls)),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

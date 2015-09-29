@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p><a href="/">Go up</a></p>
+    <p><a target="_blank" href="/admin/blog/post/{{ item.pk }}">Edit</a> </p>
+    {{  item.title }}
+    <br/>
+    {{ item.body }}
+{% endblock %}

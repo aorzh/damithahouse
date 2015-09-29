@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for item in items %}
+        {{ item.time }}
+        <a href="/blog/item/{{ item.pk }}">{{ item.title }}</a>
+        <br/>
+        {{ item.body }}
+    {% endfor %}
+{% endblock %}
