@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 
+
 def rel_project(*x):
     return os.path.join(os.path.abspath(os.path.dirname(__file__)), *x)
 
@@ -44,6 +45,7 @@ MY_APPS = (
     'room',
     'videos',
     'articles',
+    'gallery',
 )
 
 INSTALLED_APPS = (

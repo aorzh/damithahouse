@@ -23,7 +23,7 @@ class Room(models.Model):
 
 class RoomImage(models.Model):
     image = models.ImageField('Image', upload_to='houses')
-    cropping = ImageRatioField('image', '215x180')
+    cropping = ImageRatioField('image', '215x180', free_crop=True)
     obj = models.ForeignKey(Room)
 
     class Meta:
