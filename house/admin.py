@@ -9,13 +9,13 @@ class HouseImageInline(ImageCroppingMixin, admin.TabularInline):
     verbose_name = 'House picture'
     verbose_name_plural = 'House pictures'
     show_change_link = True
-
+    extra = 0
 
 
 class HouseAdmin(admin.ModelAdmin):
     inlines = [HouseImageInline, ]
     list_display = ("title",)
-
+    list_filter = ['title', "rooms"]
 
 admin.site.register(House, HouseAdmin)
 
