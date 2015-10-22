@@ -14,8 +14,8 @@ class RoomImageInline(ImageCroppingMixin, admin.TabularInline):
 
 class RoomAdmin(admin.ModelAdmin):
     inlines = [RoomImageInline, ]
-    list_display = ("title",)
-    list_filter = ['title', "house_have_room"]
+    list_display = ("title", "house_have_room", "available",)
+    list_filter = ['title', "house_have_room", "available"]
 
 
 admin.site.register(Room, RoomAdmin)

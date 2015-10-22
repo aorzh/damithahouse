@@ -10,6 +10,7 @@ class Room(models.Model):
     airbnb = models.URLField(verbose_name='Airbnb link', blank=True)
     bookingcom = models.URLField(verbose_name='Booking.com link', blank=True)
     tripsadvisor = models.URLField(verbose_name='Tripsadvisor link', blank=True)
+    available = models.BooleanField(verbose_name='Room is rented', default=False)
 
     class Meta:
         ordering = ("-title",)
